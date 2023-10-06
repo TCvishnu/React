@@ -1,0 +1,6 @@
+deep blue - #3d5a80
+light blue - #98c1d9
+
+lightest - #e0fbfc
+orangish -  #ee6c4d 
+darkest blue - #293241
