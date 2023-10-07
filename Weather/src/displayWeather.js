@@ -85,7 +85,7 @@ function DisplayWeather(){
 		  	})
 		  	.then(data => {
 		    	// Process and use the weather data
-		    	//console.log(data);
+		    	console.log(data);
 		    	showWeather(data)
 		
 		  	})
@@ -98,12 +98,18 @@ function DisplayWeather(){
 		getWeatherData();
 	}
 
+	const onEnterKeyPress = (event) =>{
+		if (event.key === 'Enter' || event.key === 'Return'){
+			onSearchClick();
+		}
+	}
+
 
 	return(
 		<div className="displayDiv">
 			<div className="inputDiv">
 				<input placeholder="   Enter City Name"
-				value={cityName} onChange={handleInputTyping}/>
+				value={cityName} onChange={handleInputTyping} onKeyPress={onEnterKeyPress}/>
 				<button onClick={onSearchClick}>
 					<img src={searchImg} width="100%" height="100%" alt="search icon"/>
 				</button>
