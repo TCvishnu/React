@@ -10,10 +10,11 @@ import windImg from './images/wind.png';
 import snowImg from './images/snowflake.png';
 
 import mistImg from './images/mist.png';
-import thunderImg from './images/thunderstorm.png';
 import moonImg from './images/moon.png';
 import moonCloudImg from './images/moonCloud.png';
 import moonRainImg from './images/moonRain.png';
+
+import ExtraInfo from './extraInfo';
 
 function DisplayWeather(){
 	const [cityName, setCityName] = useState('');
@@ -117,14 +118,10 @@ function DisplayWeather(){
 				</div>
 
 				<div className="extraDiv">
-					<div>
-						<img src={humidityImg} alt="humidity img"/>
-						<p>{percentHumidity}%<br/><span>Humidity</span></p>
-					</div>
-					<div>
-						<img src={windImg} alt="wind img"/>
-						<p>{windSpeed} km/h<br/><span>Wind Speed</span></p>
-					</div>
+					<ExtraInfo image={humidityImg} alt="humidity image"
+					data={percentHumidity} info="Humidity" unit="%"/>
+					<ExtraInfo image={windImg} alt="wind image"
+					data={windSpeed} info="Wind Speed" unit="km/h"/>
 				</div>
 			</div>
 			
