@@ -85,7 +85,7 @@ function DisplayWeather(){
 		  	})
 		  	.then(data => {
 		    	// Process and use the weather data
-		    	console.log(data);
+		    	//console.log(data);
 		    	showWeather(data)
 		
 		  	})
